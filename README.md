@@ -31,7 +31,6 @@ Projeto contruído com o objetivo de gerenciar o processo do lotes de animais de
 
 - [Backend](./server/README.md)
 - [Frontend](./web/README.md)
-- [Mobile](./mobile/README.md)
 
 ## **💄 Layout**
 
