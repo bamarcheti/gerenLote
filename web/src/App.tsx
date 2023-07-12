@@ -1,7 +1,7 @@
-import Login from './modules/auth/pages/Login';
+import AuthRoutes from './routes/AuthRoutes';
 
 const App = () => {
-  return <Login />;
+  return <AuthRoutes />;
 };
 
 export default App;
