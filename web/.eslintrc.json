@@ -5,8 +5,8 @@
     "node": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
+    "react-app",
+    "react-app/jest",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
@@ -18,7 +18,11 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "prettier",
+    "@typescript-eslint"
+  ],
   "settings": {
     "react": {
       "version": "detect"
@@ -26,6 +30,9 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "semi": ["error", "always"]
+    "semi": [
+      "error",
+      "always"
+    ]
   }
 }
