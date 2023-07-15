@@ -12,6 +12,9 @@ module.exports = {
         default: '#9ca3af',
         clean: '#e5e7eb',
         error: '#C73658'
+      },
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif']
       }
     }
   },
