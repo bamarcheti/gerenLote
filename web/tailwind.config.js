@@ -11,7 +11,8 @@ module.exports = {
         textC: '#767676',
         default: '#9ca3af',
         clean: '#e5e7eb',
-        error: '#C73658'
+        error: '#C73658',
+        step: '#DAD3D3'
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif']
