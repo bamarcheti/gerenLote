@@ -10,6 +10,7 @@ interface Props {
   styles?: string;
   className?: string;
   style?: any;
+  disabled?: boolean;
 }
 
 const Button: React.FC<Props> = ({
@@ -17,6 +18,7 @@ const Button: React.FC<Props> = ({
   buttonText,
   onClick,
   styles,
+  disabled,
   type,
   variant = 'default',
   className,
