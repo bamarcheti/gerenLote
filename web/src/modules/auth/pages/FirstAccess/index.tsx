@@ -11,7 +11,7 @@ const FirstAccess = () => {
   const formRef = useRef<FormHandles>(null);
 
   return (
-    <div className="bg-white rounded-md flex flex-col items-center justify-center gap-6 w-full h-full p-[70px]">
+    <>
       <h1 className="text-primary flex font-bold font-sans text-center justify-center text-4xl">
         BOAS-VINDAS!
       </h1>
@@ -52,7 +52,7 @@ const FirstAccess = () => {
           </div>
         </Form>
       </div>
-    </div>
+    </>
   );
 };
 

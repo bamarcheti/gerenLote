@@ -5,7 +5,9 @@ interface Props {
 const MainLayoutAuth: React.FC<Props> = ({ children }) => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-screen overflow-y-auto bg-primary px-[365px] py-36">
-      {children}
+      <div className="bg-white rounded-md flex flex-col items-center justify-center gap-4 w-full h-full p-[70px]">
+        {children}
+      </div>
     </div>
   );
 };
