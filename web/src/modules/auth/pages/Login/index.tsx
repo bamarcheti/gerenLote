@@ -16,28 +16,28 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className="w-full p-[70px]">
       <h1 className="text-primary flex font-bold font-sans text-center justify-center text-4xl">
         Login
       </h1>
-      <div className="flex flex-col w-full gap-4">
+      <div className="flex flex-col w-full">
         <Form onSubmit={handleLogin} ref={formRef}>
-          <InputForm
-            required
-            name="email"
-            type="text"
-            label="E-mail"
-            placeholder="Informe seu e-mail"
-            className="w-full font-medium h-20"
-          />
-          <InputForm
-            required
-            name="senha"
-            type="password"
-            label="Senha"
-            placeholder="Informe seu senha"
-            className="w-full font-medium h-20"
-          />
+          <div className="flex flex-col w-full">
+            <InputForm
+              name="text"
+              type="name"
+              label="Nome"
+              placeholder="Informe seu nome"
+              className="w-full font-medium h-20"
+            />
+            <InputForm
+              name="email"
+              type="text"
+              label="E-mail"
+              placeholder="Informe seu e-mail"
+              className="w-full font-medium h-20"
+            />
+          </div>
 
           <div className="flex justify-between">
             <CheckboxForm label="Manter-me conectado" name="conectado" />
@@ -61,7 +61,7 @@ const Login = () => {
           </div>
         </Form>
       </div>
-    </>
+    </div>
   );
 };
 
