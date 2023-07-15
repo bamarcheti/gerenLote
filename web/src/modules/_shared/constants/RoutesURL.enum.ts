@@ -1,5 +1,6 @@
 enum RoutesURL {
-  LOGIN = '/login'
+  LOGIN = '/login',
+  FIRST_ACCESS = '/first-access'
 }
 
 export default RoutesURL;
