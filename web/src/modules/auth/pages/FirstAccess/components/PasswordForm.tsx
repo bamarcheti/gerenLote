@@ -2,7 +2,7 @@ import InputForm from '../../../../../components/FormComponents/InputForm';
 
 const PasswordForm = () => {
   return (
-    <div className="flex flex-col w-full">
+    <>
       <InputForm
         name="password"
         type="password"
@@ -17,7 +17,7 @@ const PasswordForm = () => {
         placeholder="Informe a mesma senha"
         className="w-full font-medium h-20"
       />
-    </div>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import InputForm from '../../../../../components/FormComponents/InputForm';
 
 const PersonalForm = () => {
   return (
-    <div className="flex flex-col w-full">
+    <>
       <InputForm
         name="text"
         type="name"
@@ -17,7 +17,7 @@ const PersonalForm = () => {
         placeholder="Informe seu e-mail"
         className="w-full font-medium h-20"
       />
-    </div>
+    </>
   );
 };
 

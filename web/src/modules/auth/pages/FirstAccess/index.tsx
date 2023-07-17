@@ -45,7 +45,7 @@ const FirstAccess = () => {
       </div>
       <div className="flex flex-col w-full">
         <Form onSubmit={() => ({})} ref={formRef}>
-          {displayStep(currentStep)}
+          <div className="flex flex-col w-full px-10">{displayStep(currentStep)}</div>
           <div className="flex flex-col items-center justify-start mt-1 gap-6">
             {currentStep === 1 && (
               <span className="flex text-textB font-medium gap-1">

@@ -1,12 +1,11 @@
 interface Props {
-  className?: string;
   children: React.ReactNode;
 }
 
-const MainLayoutAuth: React.FC<Props> = ({ className, children }) => {
+const MainLayoutAuth: React.FC<Props> = ({ children }) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen overflow-y-auto bg-primary xl:px-[365px] md:px-44 md:py-20">
-      <div className="bg-white md:rounded-md rounded-none flex flex-col items-center justify-center w-full h-full">
+    <div className="flex flex-col items-center justify-center w-full h-screen overflow-y-auto md:bg-primary bg-white">
+      <div className="bg-white md:rounded-md rounded-none flex flex-col items-center justify-center w-auto h-auto">
         {children}
       </div>
     </div>
