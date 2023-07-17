@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full px-28">
+    <div className="w-full xl:px-28 px-7">
       <h1 className="text-primary flex font-bold font-sans text-center justify-center text-4xl">
         Login
       </h1>
@@ -41,7 +41,7 @@ const Login = () => {
 
           <div className="flex w-full justify-between">
             <CheckboxForm label="Manter-me conectado" name="conectado" />
-            <span className="text-textB font-medium text-base hover:underline cursor-pointer">
+            <span className="text-textB font-medium text-end text-base hover:underline cursor-pointer">
               Esqueceu a senha?
             </span>
           </div>
