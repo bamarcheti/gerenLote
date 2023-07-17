@@ -17,7 +17,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="w-full sm:p-6">
+      <div className="w-full p-0 sm:p-6">
         <h1 className="text-primary mb-8 flex font-bold font-sans text-center justify-center text-4xl">
           Login
         </h1>
