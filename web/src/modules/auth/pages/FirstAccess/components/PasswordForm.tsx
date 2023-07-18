@@ -11,8 +11,8 @@ const PasswordForm = () => {
         className="w-full font-medium h-20"
       />
       <InputForm
-        name="password"
-        type="passwordConfirmated"
+        name="passwordConfirmated"
+        type="password"
         label="Confirme sua senha"
         placeholder="Informe a mesma senha"
         className="w-full font-medium h-20"

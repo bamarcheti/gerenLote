@@ -34,15 +34,21 @@ const FirstAccess = () => {
     <>
       <div className="w-full p-0 sm:p-6">
         <DisplayStepper steps={steps} currentStep={currentStep} complete={complete} />
-        <div className="mt-4">
+        <div className="my-4 gap-3 flex flex-col justify-center text-center">
           {currentStep === 1 && (
             <h1 className="text-primary flex font-bold font-sans text-center justify-center text-4xl">
               BOAS-VINDAS!
             </h1>
           )}
           <h2 className="text-primary flex font-medium font-sans text-center justify-center text-2xl">
-            Crie sua conta
+            {currentStep !== 3 ? 'Crie sua conta' : 'Escolha uma senha'}
           </h2>
+          {currentStep === 3 && (
+            <h2 className="text-textB flex font-medium font-sans text-center justify-center text-base">
+              A senha deve ter pelo menos 8 caracteres <br /> (letrar A-Z, a-z, números e caracteres
+              especiais)
+            </h2>
+          )}
         </div>
         <div className="flex flex-col w-full">
           <Form onSubmit={() => ({})} ref={formRef}>
