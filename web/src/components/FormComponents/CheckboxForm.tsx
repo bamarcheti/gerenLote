@@ -29,7 +29,11 @@ const CheckboxForm = ({ name, label, ...rest }: Props) => {
   return (
     <div className="flex flex-col text-sm">
       <div className="flex items-center py-1">
-        <label className={`font-medium flex-shrink-0 ${error ? ' text-error' : 'text-textA'}`}>
+        <label
+          className={`flex items-center font-medium flex-shrink-0 gap-1 cursor-pointer ${
+            error ? ' text-error' : 'text-textA'
+          }`}
+        >
           <input
             type="checkbox"
             defaultChecked={defaultValue}
@@ -37,13 +41,11 @@ const CheckboxForm = ({ name, label, ...rest }: Props) => {
             checked={value}
             onChange={handleChange}
             id={fieldName}
-            className="flex accent-primary"
+            className="flex cursor-pointer items-center accent-primary"
             {...rest}
           />
+          <span className={`font-medium ${error ? ' text-red-500' : 'text-textA'}`}>{label}</span>
         </label>
-        <span className={`ml-2 font-medium ${error ? ' text-red-500' : 'text-textA'}`}>
-          {label}
-        </span>
       </div>
       {error && <span className="text-error text-xs ml-1">{error}</span>}
     </div>
