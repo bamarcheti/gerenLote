@@ -36,7 +36,7 @@ text 127codLote		número de lote ou código único para identificar o grupo de a
 data	dataEntrada	(podem ter entrados em um dia/hora e serem cadastrados em outro dia)
 text 127origem		descrição simples sobre a origem, lugar, endereço.
 int	quantidade	uantidade de animais na entrada do lote
-text 100raca		especie ou raça dos animais
+fk	idTipoAnimal	fk referente ao tiposAnimais especie ou raça dos animais
 float	pesoMedio	peso médio dos animais
 text 500anotacoes	descrição, anotações detalhadas sobre o lote
 fk	*idResponsavel	fk referente ao id do usuário
@@ -58,6 +58,7 @@ text 500anotacoes	descrição, anotações detalhadas sobre o lote
 float	valorVenda	valor da venda na escala do real: 12,25
 text 127comprador	nome do comprador ou razão social
 fk	*idResponsavel	fk referente ao id do usuário
+fk	*idEntrada	fk referente ao id entrada (se houver)
 	--
 data	dataCadastro
 data	dataUpdate
@@ -66,6 +67,15 @@ data	dataUpdate
 motivosDeSaidas
 int	id		identificador
 text 100titulo		Titulo descritivo do motivo de saída: ex venda...
+	--
+data	dataCadastro
+data	dataUpdate
+
+
+tiposAnimais
+int	id		identificador
+text 100especie		Especie do animal
+text 100raca		Raça do animal
 	--
 data	dataCadastro
 data	dataUpdate

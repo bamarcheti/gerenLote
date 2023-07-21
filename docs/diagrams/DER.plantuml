@@ -1,0 +1,108 @@
+@startuml
+!theme cerulean-outline
+
+entity "usuarios" as usuarios {
+  *id : int <<generated>>
+  --
+  nome : text(100) <<not null>>
+  email : text(127) <<not null>> <<is unique>>
+  telefone : text(16) <<not null>> <<is unique>>
+  senha : password(100) <<not null>>
+  -idTipoDeAcesso : number <<not null>>
+  isAtive : boolean <<not null>> <<default: true>>
+  isEmailCheck : boolean <<not null>> <<default: false>>
+  isTelefoneChek : boolean <<not null>> <<default: false>>
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>>
+}
+
+
+entity "tokens" as tokens {
+  *id : int <<generated>>
+  --
+  token : text(300) <<not null>> <<is unique>>
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>> 
+}
+
+
+entity "tiposDeAcesso" as tiposDeAcesso {
+  *id : int <<generated>>
+  --
+  titulo : text(127) <<not null>> <<is unique>>
+  cod : text(8) <<not null>>
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>> 
+}
+
+
+entity "entradas" as entradas {
+  *id : int <<generated>>
+  --
+  codLote : text(127) <<not null>>
+  dataEntrada : data <<not null>>
+  origem : text(127)
+  quantidade : int <<not null>>
+  -idTipoAnimail : int <<not null>>
+  pesoMedio : float <<not null>>
+  anotacoes : text(500)
+  -idResponsavel : int <<not null>>
+  valorCompra : float <<not null>>
+  -idSaida : int
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>> 
+}
+
+
+entity "saidas" as saidas {
+  *id : int <<generated>>
+  --
+  dataSaida : data <<not null>>
+  destino : text(127)
+  quantidade : int <<not null>>
+  -idMotivoSaida : int <<not null>>
+  pesoMedio : float <<not null>>
+  anotacoes : text(500)
+  valorVenda : float <<not null>>
+  comprador : text(127)
+  -idResponsavel : int <<not null>>
+  -idEntrada : int
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>> 
+}
+
+
+entity "motivosSaidas" as motivosSaidas {
+  *id : int <<generated>>
+  --
+  titulo : text(100) <<not null>> <<is unique>>
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>> 
+}
+
+
+entity "tiposAnimais" as tiposAnimais {
+  *id : int <<generated>>
+  --
+  especie : text(100) <<not null>>
+  raca : text(100) <<not null>>
+  --
+  dataCadastro : data <<not null>>
+  dataUpdate : data <<not null>> 
+}
+
+' RELACIONAMENTOS
+usuarios }o--|| tiposDeAcesso
+usuarios ||--o{ entradas
+usuarios ||--o{ saidas
+entradas |o--o| saidas
+entradas }o--|| tiposAnimais
+saidas }o--|| motivosSaidas
+
+@enduml
