@@ -1,0 +1,72 @@
+usuarios
+int	id		identificador
+text 100nome		nome do usuário 
+text 127email		email do usuário 
+text 16	telefone	telefone do usuário 
+text 100senha		senha do usuário 
+fk	*idTipoDeAcesso	fk referente ao id tiposDeAcessos que usuário terá ao acessar o sistema
+boolean	isAtive		usuário esta ativo - inativo siginificará que a conta esta em processo para excluir
+boolean	isEmailCheck	email do usuário foi confirmado
+boolean	isTelefoneCheck telefone do usuário foi confirmado
+	--
+data	dataCadastro	
+data	dataUpdate	
+
+
+tokes
+int	id		identificador
+text 300token		Token de acesso ao sistema
+	--
+data	dataCadastro
+data	dataUpdate
+
+
+tiposDeAcessos
+int	id		identificador
+text 127título		titulo do acesso
+bin 8	cod		código de permissões de acesso
+	--
+data	dataCadastro
+data	dataUpdate
+
+
+entradas	
+int	id		identificador
+text 127codLote		número de lote ou código único para identificar o grupo de animais
+data	dataEntrada	(podem ter entrados em um dia/hora e serem cadastrados em outro dia)
+text 127origem		descrição simples sobre a origem, lugar, endereço.
+int	quantidade	uantidade de animais na entrada do lote
+text 100raca		especie ou raça dos animais
+float	pesoMedio	peso médio dos animais
+text 500anotacoes	descrição, anotações detalhadas sobre o lote
+fk	*idResponsavel	fk referente ao id do usuário
+float	valorCompra	valor da compra na escala do real: 12,25
+fk	*idSaida	fk referente ao id saídas (se houver)
+	--
+data	dataCadastro
+data	dataUpdate
+
+
+saidas
+int	id		identificador
+data	dataSaida	(podem ter saidos em um dia/hora e serem cadastrados em outro dia)
+text 127destino		descrição simples sobre o destino, lugar, endereço.
+int	quantidade	quantidade de animais na saída do lote
+fk	*idMotivoSaida	fk referente ao id do motivos de saídas
+float	pesoMedio	peso médio dos animais
+text 500anotacoes	descrição, anotações detalhadas sobre o lote 
+float	valorVenda	valor da venda na escala do real: 12,25
+text 127comprador	nome do comprador ou razão social
+fk	*idResponsavel	fk referente ao id do usuário
+	--
+data	dataCadastro
+data	dataUpdate
+
+
+motivosDeSaidas
+int	id		identificador
+text 100titulo		Titulo descritivo do motivo de saída: ex venda...
+	--
+data	dataCadastro
+data	dataUpdate
+
