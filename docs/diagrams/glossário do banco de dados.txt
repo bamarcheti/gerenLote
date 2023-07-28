@@ -52,6 +52,7 @@ int	id		identificador
 data	dataSaida	(podem ter saidos em um dia/hora e serem cadastrados em outro dia)
 text 127destino		descrição simples sobre o destino, lugar, endereço.
 int	quantidade	quantidade de animais na saída do lote
+int	mortalidade	quantidade total de mortalidade de animais na saída do lote	<- ADD DPS ISSO AQUI NO BANCO OK?
 fk	*idMotivoSaida	fk referente ao id do motivos de saídas
 float	pesoMedio	peso médio dos animais
 text 500anotacoes	descrição, anotações detalhadas sobre o lote 
