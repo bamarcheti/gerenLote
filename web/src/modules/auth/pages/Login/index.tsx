@@ -50,7 +50,12 @@ const Login = () => {
 
             <div className="flex flex-col items-center mt-3 gap-9">
               <div className="flex justify-center">
-                <Button buttonText="Entrar" variant="primary" type="submit" />
+                <Button
+                  buttonText="Entrar"
+                  variant="primary"
+                  type="submit"
+                  onClick={() => navigate(RoutesURL.HOME)}
+                />
               </div>
               <span className="flex flex-wrap justify-center text-textB font-medium gap-1">
                 Não tem uma conta?
